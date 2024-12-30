@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <title>My Portfolio.</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- header design -->
+    <header class="header">
+        <a class="logo">My Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Kanlaya Berger</h1>
+            <p>A passionate game programmer and visionary game designer who thrives on creating immersive experiences through code and design.</p>
+            <p>Currently, I'm a student of Brigham Young University – Hawaii, majoring in Computer Science and minoring in Marketing and Visual Arts.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/OmanjuuOfficial/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/Om4njuu"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/om4njuu/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/kanlaya-berger/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="files/Resume.pdf" class="btn">Download CV</a>
+        </div>
+
+        <div class="describe-container">
+            <div class="describe-box">
+                <div class="describe" style="--i:0;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Game Developer</h3>
+                </div>
+                <div class="describe" style="--i:1;">
+                    <i class='bx bx-bulb'></i>
+                    <h3>Critical Thinker</h3>
+                </div>
+                <div class="describe" style="--i:2;">
+                    <i class='bx bx-detail'></i>
+                    <h3>Detail-Oriented</h3>
+                </div>
+                <div class="describe" style="--i:3;">
+                    <i class='bx bx-palette'></i>
+                    <h3>Creative</h3>
+                </div>
+
+                <div class="circle"></div>
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+
+        <div class="home-img">
+            <img src="images/home.png">
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About Me</h2>
+            <p>Hello! I'm Fah, a dedicated game programmer and creative designer with expertise in a wide range of tools and technologies. From Unity and Java to graphic design and video editing, I leverage my skills to bring ideas to life.</p>
+            <ul class="skills">
+                <p style="font-weight: bold;">My toolkit:</p>
+                <li>Programming: C++, C#, Java, SQL, VBA</li>
+                <li>Game Development: Unity, Unreal Engine, Godot Engine</li>
+                <li>Web & App Development: HTML, CSS, JavaScript</li>
+                <li>Design & Media: Adobe Suite, Canva, Vegas Pro</li>
+                <li>Tools & Platforms: Android Studio, Arduino, AWS, Cisco Packet Tracer, Github, Tableau, Workday, Microsoft Office</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Projects</h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <video class ="video" src="videos/portfolio1.mp4" autoplay muted loop></video>
+
+                <div class="portfolio-layer">
+                    <h4>2D Pixel RPG Adventure (In Progress)</h4>
+                    <p>A showcase of game development skills with Unity and C#</p>
+                    <a href="https://sharemygame.com/@Om4njuu/2d-rpg-adventure" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <!-- Add additional portfolio items here -->
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Feel Free To Contact Me!</h2>
+
+        <div class="contact-form">
+            <form action="https://formsubmit.co/omanjuu.20@gmail.com" method="POST">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                    <input type="text" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <div class="input-box">
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+
+        <h2 class="heading">OR</h2>
+
+        <div class="email">
+            <a class = "email-btn" href="mailto:omanjuu.20@gmail.com"><i class='bx bx-mail-send'></i></a>
+            <p>Email me at: omanjuu.20@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
