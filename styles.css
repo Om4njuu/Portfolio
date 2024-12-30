@@ -285,3 +285,34 @@ body.dark-mode .input-box input, .contact-form form textarea {
     background: #ddd;
     color: #222;
 }
+
+/* ========== Success Submit Page ========== */
+.success-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success-container h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.success-container p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.success-container a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.success-container a:hover {
+    text-decoration: underline;
+}
