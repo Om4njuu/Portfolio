@@ -16,6 +16,12 @@
 </head>
 
 <body>
+    <div id="beta-alert" class="beta-alert">
+        <div class="beta-alert-content">
+            <p>This website is in beta and will be updated to the new version within this Spring.</p>
+            <button id="close-alert" class="close-alert-btn" onclick="document.getElementById('beta-alert').style.display='none'">Close</button>
+        </div>
+    </div>
 
     <!-- header design -->
     <header class="header">
@@ -33,8 +39,11 @@
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
+    <main>
     <!-- home section design -->
     <section class="home" id="home">
+    
+
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1>Kanlaya Berger</h1>
@@ -46,7 +55,7 @@
                 <a href="https://www.instagram.com/om4njuu/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
                 <a href="https://www.linkedin.com/in/kanlaya-berger/" target="_blank"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <a href="files/Resume.pdf" class="btn">Download Resume/CV</a>
+            <a href="files/Resume.pdf" class="btn">Resume</a>
         </div>
 
         <div class="describe-container">
@@ -178,6 +187,7 @@
             </form>
         </div>
     </section>
+    </main>
 
     <!-- custom js -->
     <script src="script.js"></script>

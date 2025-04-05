@@ -154,7 +154,6 @@ section {
     text-align: left;
 }
 
-/* ========== Portfolio Section ========== */
 .video {
     display: block;
     margin: 0 auto;
@@ -315,6 +314,51 @@ body.dark-mode .input-box input, .contact-form form textarea {
 
 .success-container a:hover {
     text-decoration: underline;
+}
+
+/* Beta Alert Styles */
+.beta-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.3s ease;
+}
+
+.beta-alert-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.beta-alert-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.close-alert-btn {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.close-alert-btn:hover {
+    background: #555;
 }
 
 @media only screen and (max-width: 600px) {
