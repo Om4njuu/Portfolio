@@ -317,7 +317,7 @@ body.dark-mode .input-box input, .contact-form form textarea {
 }
 
 /* Beta Alert Styles */
-.beta-alert {
+/* .beta-alert {
     position: fixed;
     top: 0;
     left: 0;
@@ -359,7 +359,7 @@ body.dark-mode .input-box input, .contact-form form textarea {
 
 .close-alert-btn:hover {
     background: #555;
-}
+} */
 
 @media only screen and (max-width: 600px) {
     body {
