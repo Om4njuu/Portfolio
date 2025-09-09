@@ -33,13 +33,13 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-/* ========== Dark Mode Toggle ========== */
-let darkModeIcon = document.querySelector('#darkMode-icon');
+// /* ========== Dark Mode Toggle ========== */
+// let darkModeIcon = document.querySelector('#darkMode-icon');
 
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('dark-mode');
-};
+// darkModeIcon.onclick = () => {
+//     darkModeIcon.classList.toggle('bx-sun');
+//     document.body.classList.toggle('dark-mode');
+// };
 
 /* ========== Scroll Reveal ========== */
 ScrollReveal({
