@@ -106,7 +106,6 @@ const formBtn = document.querySelector("[data-form-btn]");
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -135,12 +134,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-/* Certification filter (scoped) */
 const certFilterBtns = document.querySelectorAll("[data-cert-filter-btn]");
 const certItems = document.querySelectorAll(".cert-posts-list [data-filter-item]");
 
 if (certFilterBtns.length && certItems.length) {
-  // show all initially
   certItems.forEach(item => item.classList.add("active"));
 
   let lastCertBtn = certFilterBtns[0];

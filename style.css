@@ -1080,6 +1080,48 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.resume-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.resume-actions .btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--border-gradient-onyx);
+  color: var(--primary-blue);
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.resume-actions .btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.resume-actions .btn:hover { background: var(--bg-gradient-blue-1); }
+.resume-actions .btn:hover::before { background: var(--bg-gradient-blue-2); }
+
+@media (max-width: 420px) {
+  .resume-actions { flex-direction: column; align-items: stretch; }
+  .resume-actions .btn { width: 100%; }
+}
+
 @media (min-width: 450px) {
   .clients-item { min-width: calc(33.33% - 10px); }
 
