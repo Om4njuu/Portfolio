@@ -1,74 +1,167 @@
-/* ========== Toggle Navbar ========== */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+'use strict';
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-/* ========== Scroll Active Link ========== */
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+if (sidebarBtn && sidebar) {
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+}
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        }
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+if (testimonialsItem.length > 0 && modalContainer && modalCloseBtn && overlay && modalImg && modalTitle && modalText) {
+
+  for (let i = 0; i < testimonialsItem.length; i++) {
+
+    testimonialsItem[i].addEventListener("click", function () {
+
+      const avatar = this.querySelector("[data-testimonials-avatar]");
+      const title = this.querySelector("[data-testimonials-title]");
+      const text = this.querySelector("[data-testimonials-text]");
+
+      if (avatar) {
+        modalImg.src = avatar.src || "";
+        modalImg.alt = avatar.alt || "";
+      }
+
+      if (title) modalTitle.innerHTML = title.innerHTML;
+      if (text) modalText.innerHTML = text.innerHTML;
+
+      testimonialsModalFunc();
     });
+  }
 
-    let header = document.querySelector('.header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+  overlay.addEventListener("click", testimonialsModalFunc);
+}
 
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-// /* ========== Dark Mode Toggle ========== */
-// let darkModeIcon = document.querySelector('#darkMode-icon');
+select.addEventListener("click", function () { elementToggleFunc(this); });
 
-// darkModeIcon.onclick = () => {
-//     darkModeIcon.classList.toggle('bx-sun');
-//     document.body.classList.toggle('dark-mode');
-// };
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
 
-/* ========== Scroll Reveal ========== */
-ScrollReveal({
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
 
-// Get all elements with class="closebtn"
-var close = document.getElementsByClassName("closebtn");
-var i;
+  });
+}
 
-// Loop through all close buttons
-for (i = 0; i < close.length; i++) {
-  // When someone clicks on a close button
-  close[i].onclick = function(){
+const filterItems = document.querySelectorAll("[data-filter-item]");
 
-    // Get the parent of <span class="closebtn"> (<div class="alert">)
-    var div = this.parentElement;
+const filterFunc = function (selectedValue) {
 
-    // Set the opacity of div to 0 (transparent)
-    div.style.opacity = "0";
+  for (let i = 0; i < filterItems.length; i++) {
 
-    // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-    setTimeout(function(){ div.style.display = "none"; }, 600);
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
   }
 }
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .portfolio-box, .contact-form form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1', { origin: 'left' });
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+  });
+}
+
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+
+  });
+}
+
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let j = 0; j < pages.length; j++) {
+      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+        pages[j].classList.add("active");
+        navigationLinks[j].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
+      }
+    }
+  });
+}
+
+/* Certification filter (scoped) */
+const certFilterBtns = document.querySelectorAll("[data-cert-filter-btn]");
+const certItems = document.querySelectorAll(".cert-posts-list [data-filter-item]");
+
+if (certFilterBtns.length && certItems.length) {
+  // show all initially
+  certItems.forEach(item => item.classList.add("active"));
+
+  let lastCertBtn = certFilterBtns[0];
+
+  certFilterBtns.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const selectedCategory = this.innerText.toLowerCase();
+
+      certFilterBtns.forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+
+      certItems.forEach(item => {
+        const itemCategory = (item.dataset.category || "").toLowerCase();
+        if (selectedCategory === "all" || selectedCategory === itemCategory) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+
+      lastCertBtn = this;
+    });
+  });
+}

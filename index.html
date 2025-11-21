@@ -2,220 +2,1319 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="icon" rel="icon" href="images/logo.png">
-    <title>My Portfolio.</title>
-
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Val - Personal Portfolio</title>
+  <link rel="shortcut icon" href="./images/sig_v.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- <div id="beta-alert" class="beta-alert">
-        <div class="beta-alert-content">
-            <p>This website is in beta and will be updated to the new version within the end of the year.</p>
-            <button id="close-alert" class="close-alert-btn" onclick="document.getElementById('beta-alert').style.display='none'">Close</button>
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./images/my-avatar.png" alt="Kanlaya Berger" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Kanlaya Berger">Kanlaya Berger</h1>
+          <p class="title">Critical Thinker</p>
+          <br>
+          <p class="title">Detail-Oriented</p>
+          <br>
+          <p class="title">Problem Solver</p>
         </div>
-    </div> -->
+      </div>
 
-    <!-- header design -->
-    <header class="header">
-        <a class="logo">My Portfolio.</a>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:omanjuu.20@gmail.com" class="contact-link">omanjuu.20@gmail.com</a>
+            </div>
+          </li>
 
-        <!-- <div class="bx bx-moon" id="darkMode-icon"></div> -->
-    </header>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
 
-    <main>
-    <!-- home section design -->
-    <section class="home" id="home">
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Laie, Hawaii, USA</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/Om4njuu/" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/kanlaya-berger/" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://om4njuu.itch.io/" class="social-link">
+              <ion-icon class = "socials-icons" name="game-controller-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certification</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
     
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
 
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Kanlaya Berger</h1>
-            <p>A passionate game programmer and visionary game designer who thrives on creating immersive experiences through code and design.</p>
-            <p>Currently, I'm a student of Brigham Young University – Hawaii, majoring in Computer Science and minoring in Marketing and Visual Arts.</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/OmanjuuOfficial/" target="_blank"><i class='bx bxl-facebook'></i></a>
-                <a href="https://github.com/Om4njuu" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/om4njuu/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/kanlaya-berger/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://om4njuu.itch.io" target="_blank"><i class='bx bx-joystick'></i></a>
+        <section class="about-text">
+          <p>
+            A passionate game programmer and visionary game designer who thrives on creating immersive experiences through code and design.
+          </p>
+          <p>
+            Currently, I'm a student of Brigham Young University – Hawaii, majoring in Computer Science and minoring in Marketing and Visual Arts.
+          </p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-design.png" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Game Development</h4>
+                <p class="service-item-text">
+                  Using Unity and Unreal Engine to create engaging and immersive games. Experience with 2D and 3D game development.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-dev.png" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+                <p class="service-item-text">
+                  Using Ruby on Rails, Next.js, Docker, HTML, CSS, and JavaScript to build responsive and dynamic websites.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-app.png" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile Apps</h4>
+                <p class="service-item-text">
+                  Java and Kotlin for professional development of applications for Android. C# and Unity for game development on Mobile.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-photo.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Design & Media</h4>
+
+                <p class="service-item-text">
+                  Adobe Suite, Canva, Vegas Pro for creating high-quality images and engaging videos. Blender for 3D modeling and animation.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-            <a href="files/Resume.pdf" class="btn">Resume</a>
-        </div>
+            <h3 class="h3">Education</h3>
+          </div>
 
-        <div class="describe-container">
-            <div class="describe-box">
-                <div class="describe" style="--i:0;">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Game Developer</h3>
-                </div>
-                <div class="describe" style="--i:1;">
-                    <i class='bx bx-bulb'></i>
-                    <h3>Critical Thinker</h3>
-                </div>
-                <div class="describe" style="--i:2;">
-                    <i class='bx bx-detail'></i>
-                    <h3>Detail-Oriented</h3>
-                </div>
-                <div class="describe" style="--i:3;">
-                    <i class='bx bx-search-alt'></i>
-                    <h3>Problem Solver</h3>
-                </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Brigham Young University – Hawaii</h4>
+              <span>2022 — 2026</span>
+              <p class="timeline-text">
+                B.S. in Computer Science, and Minoring in Visual Arts and Marketing
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
-        </div>
+            <h3 class="h3">Experience</h3>
+          </div>
 
-        <div class="home-img">
-            <img src="images/home.png" alt="home image">
-        </div>
-    </section>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">CIS IT Tutor @ Brigham Young University – Hawaii</h4>
+              <span>September 2024 — Present</span>
+              <p class="timeline-text">
+                • Provided individualized tutoring and coaching in IT, CIS, and
+                CS courses, helping more than 20 students per day at various
+                levels of learning
+              </p>
+              <p class="timeline-text">
+                • Reviewed class materials, offered study and test-taking
+                strategies, and reinforced positive learning habits to motivate
+                and build student confidence
+              </p>
+              <p class="timeline-text">
+                • Assisted professors with grading and other course-related
+                tasks to ensure smooth course operations
+              </p>
+            </li>
 
-    <!-- about section design -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">About Me</h2>
-            <p>Hello! I'm Fah, a dedicated game programmer and creative designer with expertise in a wide range of tools and technologies. From Unity and Java to graphic design and video editing, I leverage my skills to bring ideas to life.</p>
-            <ul class="skills">
-                <li style="font-weight: bold; list-style-type: none;">My Toolkit:</li>
-                <li>Programming: C++, C#, Java, SQL, VBA, Assembly</li>
-                <li>Game Development: Unity, Unreal Engine, Godot Engine</li>
-                <li>Web & App Development: HTML, CSS, JavaScript, Next.js</li>
-                <li>Design & Media: Adobe Suite, Canva, Vegas Pro</li>
-                <li>Tools & Platforms: Android Studio, Arduino, AWS, Cisco Packet Tracer, Git, Github, Tableau, Workday, Microsoft Office, SPSS, Vercel</li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">HR Technical Support @ Brigham Young University – Hawaii</h4>
+              <span>April 2025 — October 2025</span>
+              <p class="timeline-text">
+                • Supported the Workday Divestiture Project by helping implement a new Workday tenant during the transition to single-campus systems.
+              </p>
+              <p class="timeline-text">
+                • Researched, organized, and built 5+ EIBs to efficiently transport critical HR data between the old and new tenants, ensuring data integrity and smooth migration.
+              </p>
+              <p class="timeline-text">
+                • Contributed to the successful and on-schedule go-live by proactively troubleshooting issues and optimizing workflows, helping the transition run smoothly with minimal disruption.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Marketing Researcher/Planner Internship for BDigital Marketing Agency @ Brigham Young University – Hawaii</h4>
+              <span>September 2024 — December 2024</span>
+              <p class="timeline-text">
+                • Leveraged IT expertise to perform comprehensive analysis of
+                information systems, particularly Workday, within the Human
+                Resources department
+              </p>
+              <p class="timeline-text">
+                • Executed configuration, testing, and modification of
+                information systems, ensuring seamless functionality and
+                optimal performance
+              </p>
+              <p class="timeline-text">
+                • Developed and documented maintenance procedures,
+                improving system stability and assisting efficient HR
+                operations
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">HR Technical Support @ Brigham Young University – Hawaii</h4>
+              <span>June 2022 — August 2024</span>
+              <p class="timeline-text">
+                • Leveraged IT expertise to perform comprehensive analysis of
+                information systems, particularly Workday, within the Human
+                Resources department
+              </p>
+              <p class="timeline-text">
+                • Executed configuration, testing, and modification of
+                information systems, ensuring seamless functionality and
+                optimal performance
+              </p>
+              <p class="timeline-text">
+                • Developed and documented maintenance procedures,
+                improving system stability and assisting efficient HR
+                operations
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill" cursor="">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Game Development</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Web Development</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Mobile Apps Development</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Mobile Games Development</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Design & Media</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Game Development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Marketing</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Game Development</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Game Development</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Marketing</button>
+              </li>
             </ul>
-        </div>
-    </section>
+          </div>
 
-    <!-- portfolio section design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Projects</h2>
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/comingsoon.png" alt="horror maze" loading="lazy">
+                </figure>
+                <h3 class="project-title">Pacific Connect Virtual Career Fair (In Progress)</h3>
+                <p class="project-category">Web Development (Next.js and Postman)</p>
+              </a>
+            </li>
 
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/comingsoon.png" alt="coming soon">
-                <div class="portfolio-layer">
-                    <h4>Pacific Connect Virtual Career Fair (In Progress)</h4>
-                    <p>A showcase of web development skills with Next.js</p>
-                    Coming soon <i class='bx bx-link-external'></i>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/comingsoon.png" alt="gamehub" loading="lazy">
+                </figure>
+                <h3 class="project-title">GameHub (In Progress)</h3>
+                <p class="project-category">Web Development (Ruby on Rails and Docker)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="game development">
+              <a href="https://om4njuu.itch.io/horror-maze" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project8.png" alt="horror maze" loading="lazy">
+                </figure>
+                <h3 class="project-title">Horror Maze</h3>
+                <p class="project-category">Game Development (Unity and C#)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="game development">
+              <a href="https://om4njuu.itch.io/cyber-ghost" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project7.png" alt="cyber ghost" loading="lazy">
+                </figure>
+                <h3 class="project-title">Cyber Ghost</h3>
+                <p class="project-category">Game Development (Unity and C#)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="game development">
+              <a href="https://om4njuu.itch.io/carnival-horror" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project6.png" alt="carnival horror" loading="lazy">
+                </figure>
+                <h3 class="project-title">Carnival Horror</h3>
+                <p class="project-category">Game Development (Unreal Engine)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="game development">
+              <a href="https://om4njuu.itch.io/2d-pixel-rpg" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project1.png" alt="2d pixel rpg adventure" loading="lazy">
+                </figure>
+                <h3 class="project-title">2D Pixel RPG Adventure (In progress)</h3>
+                <p class="project-category">Game Development (Unity and C#)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Om4njuu/Slide-App" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project2.png" alt="slide app" loading="lazy">
+                </figure>
+                <h3 class="project-title">Slide App</h3>
+                <p class="project-category">Applications (Java and Kotlin)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Om4njuu/Memory-Game" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project3.png" alt="memory game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Memory Game</h3>
+                <p class="project-category">Web Development (JavaScript, HTML, and CSS)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Om4njuu/Tic-Tac-Toe" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project4.png" alt="tic tac toe" loading="lazy">
+                </figure>
+                <h3 class="project-title">Tic Tac Toe</h3>
+                <p class="project-category">Web Development (JavaScript, HTML, and CSS)</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Om4njuu/Snake-Game" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./images/project5.png" alt="snake game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Snake Game</h3>
+                <p class="project-category">Web Development (JavaScript, HTML, and CSS)</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="cert" data-page="certification">
+        <header>
+          <h2 class="h2 article-title">Certification</h2>
+        </header>
+
+        <section class="cert-posts">
+          <ul class="cert-filter-list">
+            <li class="cert-filter-item"><button class="active" data-cert-filter-btn>All</button></li>
+            <li class="cert-filter-item"><button data-cert-filter-btn>CodeSignal</button></li>
+            <li class="cert-filter-item"><button data-cert-filter-btn>HackerRank</button></li>
+            <li class="cert-filter-item"><button data-cert-filter-btn>LinkedIn</button></li>
+            <li class="cert-filter-item"><button data-cert-filter-btn>Zenva</button></li>
+            <li class="cert-filter-item"><button data-cert-filter-btn>Unity</button></li>
+          </ul>
+
+          <ul class="cert-posts-list">
+            <li class="cert-post-item active" data-filter-item data-category="unity">
+              <a href="https://www.credly.com/badges/b7cc2233-02c0-4587-beaa-807b249381d0/" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/unity_logo.jpg" alt="unity logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">Unity</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-10">Oct 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Unity Junior Programmer</h3>
+                  <p class="cert-text">
+                    Skills: Unity · C#
+                  </p>
                 </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/82338b4e9104477a28986038685d66759387a364f2a7884049023eafae2fc016?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BBUK24nKtR2ikWMZHzyxyDw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Advanced Google Analytics 4 (GA4)</h3>
+                  <p class="cert-text">
+                    Skills: Google Analytics
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/ebe253fe29fc31ee9bec8f5051fa5b3c2c6cb7584cc8cde27814f12118734438?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Data Visualization for Data Analysis and Analytics (2020)</h3>
+                  <p class="cert-text">
+                    Skills: Data Analysis · Data Visualization
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/8f9c9c7aa7e4bf48cbb49719cf88c7f7a686c144f69068d7c5eea1ed497ec2d7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Google Analytics 4 (GA4) Essential Training</h3>
+                  <p class="cert-text">
+                    Skills: Google Analytics
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/f3a7ea680a0141852921efb0ae8050347fafaf353f6feaf10715d36ad3a63ed1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Market Research Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Market Research
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/cebc0e85cdaa7c143290d0a47e39d4cc635a7505a7366f61b1369e44b92d0052?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">PowerPoint: Creating an Infographic (2018)</h3>
+                  <p class="cert-text">
+                    Skills: Information Graphics · Microsoft PowerPoint
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/afd637fffe085e6ca648e12915dcc1c719ea053c7cdac1f7cacd6e6c211f0c52?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01">Jan 2025</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">SPSS Statistics Essential Training</h3>
+                  <p class="cert-text">
+                    Skills: SPSS Statistics · Statistical Data Analysis
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/cm1puut5w003toj138p6xuizj/courses/251" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-10">Oct 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Introduction to C# Basics</h3>
+                  <p class="cert-text">
+                    Skills: C#
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/4b431458807c4209196d7c780df1af1d055608d114d1cab95a5ccdaf5ebe82a1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-09">Sep 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Canva: Web and Digital Design Projects</h3>
+                  <p class="cert-text">
+                    Skills: Canva
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/cm0fmf8sl002b4x8vfpvhhjz3/courses/35" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-09">Sep 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Java String Manipulation for Beginners</h3>
+                    <p class="cert-text">
+                      Skills: Java
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/284" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">C++ Loops and Conditional Statements</h3>
+                    <p class="cert-text">
+                      Skills: C++
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/7bb85390bf69" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">CSS (Basic) Certificate</h3>
+                    <p class="cert-text">
+                      Skills: Cascading Style Sheets (CSS)
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/61" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Client-side Web Development with React.js</h3>
+                    <p class="cert-text">
+                      Skills: User Interface Design · React.js · User Experience Design (UED)
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/61e56590eb202796bfd1101b3b3d5538d80924ca17450b152407d48aa44c33b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Confident Communication for Introverts</h3>
+                  <p class="cert-text">
+                    Skills: Confidence Building · Interpersonal Communication
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/283" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Cracking C++ Basics</h3>
+                    <p class="cert-text">
+                      Skills: C++
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/283" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Cracking C++ Basics</h3>
+                    <p class="cert-text">
+                      Skills: C++
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/59" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Getting Into JavaScript Fundamentals</h3>
+                    <p class="cert-text">
+                      Skills: Full-Stack Development · JavaScript
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/cm0fmf8sl002b4x8vfpvhhjz3/courses/33" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Iterations and Loops in Java</h3>
+                    <p class="cert-text">
+                      Skills: Java
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/cm0fmf8sl002b4x8vfpvhhjz3/courses/32" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Learning Simple Data Structures in Java</h3>
+                    <p class="cert-text">
+                      Skills: Java
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/cm0fmf8sl002b4x8vfpvhhjz3/courses/34" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Mastering Debugging with Java</h3>
+                    <p class="cert-text">
+                      Skills: Java · Debugging Code
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/c4bb1a3326fb" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Problem Solving (Basic) Certificate</h3>
+                    <p class="cert-text">
+                      Skills: Problem Solving
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/bffd8dfd75aa" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">React (Basic) Certificate</h3>
+                    <p class="cert-text">
+                      Skills: React.js
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/2126ddd278eb" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">SQL (Basic) Certificate</h3>
+                    <p class="cert-text">
+                      Skills: SQL
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/3bfb6a9cf54b" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">SQL (Intermediate) Certificate</h3>
+                    <p class="cert-text">
+                      Skills: SQL
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/69" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Server-side Web Development with Node.js and Express.js</h3>
+                    <p class="cert-text">
+                      Skills: Web Development · Server Side JavaScript · Express.js · Back-End Web Development · Node.js
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="hackerrank">
+              <a href="https://www.hackerrank.com/certificates/e844ae5b307d" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/hackerrank_logo.jpg" alt="hackerrank logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">HackerRank</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Software Engineer Intern Certificate</h3>
+                    <p class="cert-text">
+                      Skills: Software Engineering
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="codesignal">
+              <a href="https://learn.codesignal.com/certificates/clzk9d7z00017x53l6nx1rqao/courses/60" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/codesignal_logo.jpg" alt="codesignal logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">CodeSignal</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-08">Aug 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Web Development with HTML, CSS, and JavaScript</h3>
+                    <p class="cert-text">
+                      Skills: HTML5 · JavaScript · Cascading Style Sheets (CSS) · HTML
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="zenva">
+              <a href="https://academy.zenva.com/certificate/02b62557ac50" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/zenva_logo.jpg" alt="zenva logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">Zenva</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-07">Jul 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Godot 101 - Game Engine Foundations</h3>
+                    <p class="cert-text">
+                      Skills: Godot Engine · GDScript
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="zenva">
+              <a href="https://academy.zenva.com/certificate/d8880dc7e741" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/zenva_logo.jpg" alt="zenva logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">Zenva</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-07">Jul 2024</time>
+                  </div>
+                    <h3 class="h3 cert-item-title">Mobile Game Development with Godot</h3>
+                    <p class="cert-text">
+                      Skills: Game Engine · GDScript · Mobile Game Development
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/a5049f640d11a433daffab5f02fda26c5ea5788ef6a41e9197a1cdfb80e87ab4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Content Marketing Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Content Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/a5049f640d11a433daffab5f02fda26c5ea5788ef6a41e9197a1cdfb80e87ab4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Creating Your First Marketing Videos on LinkedIn Nano Tips with Shay Rowbottom</h3>
+                  <p class="cert-text">
+                    Skills: LinkedIn Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/d133fa35f859a1fe36f9d27af502573c787240da6d3462cc8d7b32ce3196aa62?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Digital Marketing Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Digital Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/a88305f4300e59105bbf368e9e17678e20a82569d9f4c94ba3a022606b55a6e2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Email and Newsletter Marketing Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Email Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/d003156d5480f89299dfab69534cfa9e386d1114b1a31f7b4760bb9550c5ec60?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Marketing Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/6ee661dc99ba5f81f1df692f2a9312f4eba53042fc5d88b2496f892ad4d02e75?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Marketing Foundations: Analytics</h3>
+                  <p class="cert-text">
+                    Skills: Marketing Analytics
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/6e2407ebc9e52685c58c671634d425fc9634ef9a35acec3464c29c30e0f252f1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Marketing Foundations: Customer Decision Journey</h3>
+                  <p class="cert-text">
+                    Skills: Customer Marketing · Customer Journey Mapping
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/11c2c5e2678a8ee381aad1d1eb974ee1dd06c0a15b1e493c6e17c05c98649958?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">SEO Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Search Engine Optimization (SEO)
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="cert-post-item active" data-filter-item data-category="linkedin">
+              <a href="https://www.linkedin.com/learning/certificates/33813be4bce21a4763726f369bc443b523cd747eb2932fd18926c739e05d30b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BXImQeR8PQJi0E2HQMGFgJw%3D%3D" target="_blank">
+                <figure class="cert-banner-box">
+                  <img src="./images/linkedin_logo.jpg" alt="linkedin logo" loading="lazy">
+                </figure>
+                <div class="cert-content">
+                  <div class="cert-meta">
+                    <p class="cert-category">LinkedIn</p>
+                    <span class="dot"></span>
+                    <time datetime="2024-05">May 2024</time>
+                  </div>
+                  <h3 class="h3 cert-item-title">Social Media Marketing Foundations</h3>
+                  <p class="cert-text">
+                    Skills: Social Media Marketing
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14834.081431758626!2d-157.93381721154904!3d21.643606231297873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c004542e04293fb%3A0xf8edf93e0b8b5b3!2sLaie%2C%20HI%2096762!5e0!3m2!1sen!2sus!4v1763520292641!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="https://formsubmit.co/528a8b94acb0c0ef05bc45c27c0add77" method="POST" class="form" data-form>
+            <input type="text" name="_honey" style="display: none;">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <div class="portfolio-box">
-                <video class ="video" src="videos/project5.mp4" autoplay muted loop></video>
-                <div class="portfolio-layer">
-                    <h4>Horror Maze</h4>
-                    <p>A showcase of game development skills with Unity and C#</p>
-                    <a href="https://om4njuu.itch.io/horror-maze" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <div class="portfolio-box">
-                <video class ="video" src="videos/project4.mp4" autoplay muted loop></video>
-                <div class="portfolio-layer">
-                    <h4>Cyber Ghost</h4>
-                    <p>A showcase of game development skills with Unity and C#</p>
-                    <a href="https://om4njuu.itch.io/cyber-ghost" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
 
-            <div class="portfolio-box">
-                <video class ="video" src="videos/project3.mp4" autoplay muted loop></video>
-                <div class="portfolio-layer">
-                    <h4>Carnival Horror</h4>
-                    <p>A showcase of game development skills with Unreal Engine</p>
-                    <a href="https://om4njuu.itch.io/carnival-horror" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <video class ="video" src="videos/project1.mp4" autoplay muted loop></video>
-                <div class="portfolio-layer">
-                    <h4>2D Pixel RPG Adventure (In Progress)</h4>
-                    <p>A showcase of game development skills with Unity and C#</p>
-                    <a href="https://om4njuu.itch.io/2d-pixel-rpg" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-            <video class ="video-slideapp" src="videos/project2.mp4" autoplay muted loop></video>
-                <div class="portfolio-layer">
-                    <h4>Slide App</h4>
-                    <p>A showcase of app development skills with Java and Android Studio</p>
-                    <a href="https://github.com/Om4njuu/Slide-App" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/project3.png" alt="memory game">
-                <div class="portfolio-layer">
-                    <h4>Memory Game</h4>
-                    <p>A showcase of web development skills with CSS, HTML, and JavaScript</p>
-                    <a href="https://github.com/Om4njuu/Memory-Game" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/project4.png" alt="Tic-Tac-Toe">
-                <div class="portfolio-layer">
-                    <h4>Tic-Tac-Toe</h4>
-                    <p>A showcase of web development skills with CSS, HTML, and JavaScript</p>
-                    <a href="https://github.com/Om4njuu/Tic-Tac-Toe" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/project5.png" alt="Snake game">
-                <div class="portfolio-layer">
-                    <h4>Snake game</h4>
-                    <p>A showcase of web development skills with CSS, HTML, and JavaScript</p>
-                    <a href="https://github.com/Om4njuu/Snake-Game" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Feel Free To Contact Me!</h2>
-
-        <div class="contact-form">
-            <form action="https://formsubmit.co/528a8b94acb0c0ef05bc45c27c0add77" method="POST">
-                <!--Honey pot-->
-                <input type="text" name="_honey" style="display: none;">
-                <!--Disable Captcha-->
-                <input type="hidden" name="_captcha" value="false">
-
-                <input type="hidden" name="_next" value="https://om4njuu.github.io/Portfolio/submitsuccess.html">
-
-                <div class="input-box">
-                    <input type="text" name="Full&nbsp;Name" placeholder="Full Name">
-                    <input type="email" name="Email&nbsp;Address" placeholder="Email Address">
-                    <input type="number" name="Phone&nbsp;Number" placeholder="Phone Number">
-                    <input type="text" name="Subject" placeholder="Subject">
-                </div>
-                <div class="input-box">
-                    <textarea name="Message" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="send-btn">Send</button>
-            </form>
-        </div>
-    </section>
-    </main>
-
-    <!-- custom js -->
-    <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
