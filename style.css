@@ -1344,6 +1344,59 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+/* Mobile fixes: ensure sidebar content isn't clipped and avatar/title align */
+@media (max-width: 579px) {
+  .sidebar {
+    /* allow the sidebar to show its full content on small screens */
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 10px; /* reduce extra bottom space */
+  }
+
+  .sidebar-info {
+    /* Stack avatar above text and center in the sidebar on small screens */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .avatar-box {
+    border-radius: 14px;
+    overflow: visible;
+    flex: 0 0 auto;
+  }
+
+  .avatar-box img {
+    display: block;
+    width: 72px; /* match the HTML width but ensure responsive */
+    height: auto;
+  }
+
+  .info-content {
+    /* allow the content to shrink if space is tight */
+    min-width: 0;
+  }
+
+  .info-content .name {
+    font-size: 18px;
+    word-break: break-word;
+    margin: 0;
+  }
+
+  .info-content .title {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+    box-sizing: border-box;
+  }
+
+  /* Hide the collapsed extra info so it doesn't reserve vertical space on mobile */
+  .sidebar-info_more { display: none; }
+  .sidebar.active .sidebar-info_more { display: block; }
+}
+
 @media (min-width: 768px) {
 
   .sidebar, article { width: 700px; }

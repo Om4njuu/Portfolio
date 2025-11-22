@@ -81,6 +81,41 @@ const filterFunc = function (selectedValue) {
       filterItems[i].classList.remove("active");
     }
   }
+
+    /* Handle contact form submission: route to local success page then return */
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        // Prevent default submit since we want to show the local success page
+        e.preventDefault();
+
+        try {
+          // Save current page so the success page can return here
+          sessionStorage.setItem("prevPage", location.href);
+        } catch (err) {
+          // ignore storage failures
+        }
+
+        // Redirect to the local success page
+        location.href = "./submitsuccess.html";
+      });
+    }
+
+    /* Auto-return logic for success page */
+    const successContainer = document.querySelector('.success-container');
+    if (successContainer) {
+      // Try to get stored previous page, fallback to document.referrer
+      const prev = sessionStorage.getItem('prevPage') || document.referrer || '';
+      // Wait 3 seconds then go back (use stored URL if available)
+      setTimeout(() => {
+        if (prev && prev !== location.href) {
+          // Navigate to stored previous page
+          location.href = prev;
+        } else {
+          // Fallback: go back in history
+          history.back();
+        }
+      }, 3000);
+    }
 }
 
 let lastClickedBtn = filterBtn[0];
@@ -106,6 +141,7 @@ const formBtn = document.querySelector("[data-form-btn]");
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
 
+    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -134,10 +170,12 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+/* Certification filter (scoped) */
 const certFilterBtns = document.querySelectorAll("[data-cert-filter-btn]");
 const certItems = document.querySelectorAll(".cert-posts-list [data-filter-item]");
 
 if (certFilterBtns.length && certItems.length) {
+  // show all initially
   certItems.forEach(item => item.classList.add("active"));
 
   let lastCertBtn = certFilterBtns[0];
@@ -161,4 +199,43 @@ if (certFilterBtns.length && certItems.length) {
       lastCertBtn = this;
     });
   });
+}
+
+/* Certification mobile select (mirrors portfolio select behavior) */
+const certSelect = document.querySelector("[data-cert-select]");
+const certSelectItems = document.querySelectorAll("[data-cert-select-item]");
+const certSelectValue = document.querySelector("[data-cert-selecct-value]");
+
+if (certSelect) {
+  certSelect.addEventListener("click", function () { elementToggleFunc(this); });
+
+  for (let i = 0; i < certSelectItems.length; i++) {
+    certSelectItems[i].addEventListener("click", function () {
+      const selectedValue = this.innerText.toLowerCase();
+
+      if (certSelectValue) certSelectValue.innerText = this.innerText;
+      elementToggleFunc(certSelect);
+
+      // update button active state
+      if (certFilterBtns.length) {
+        certFilterBtns.forEach(b => b.classList.remove('active'));
+        for (let j = 0; j < certFilterBtns.length; j++) {
+          if (certFilterBtns[j].innerText.toLowerCase() === selectedValue) {
+            certFilterBtns[j].classList.add('active');
+            break;
+          }
+        }
+      }
+
+      // apply filter to cert items
+      for (let k = 0; k < certItems.length; k++) {
+        const itemCategory = (certItems[k].dataset.category || '').toLowerCase();
+        if (selectedValue === 'all' || selectedValue === itemCategory) {
+          certItems[k].classList.add('active');
+        } else {
+          certItems[k].classList.remove('active');
+        }
+      }
+    });
+  }
 }
