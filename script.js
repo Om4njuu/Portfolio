@@ -9,7 +9,7 @@ if (sidebarBtn && sidebar) {
   sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 }
 
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const recommendsItem = document.querySelectorAll("[data-recommends-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -18,20 +18,20 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-const testimonialsModalFunc = function () {
+const recommendsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-if (testimonialsItem.length > 0 && modalContainer && modalCloseBtn && overlay && modalImg && modalTitle && modalText) {
+if (recommendsItem.length > 0 && modalContainer && modalCloseBtn && overlay && modalImg && modalTitle && modalText) {
 
-  for (let i = 0; i < testimonialsItem.length; i++) {
+  for (let i = 0; i < recommendsItem.length; i++) {
 
-    testimonialsItem[i].addEventListener("click", function () {
+    recommendsItem[i].addEventListener("click", function () {
 
-      const avatar = this.querySelector("[data-testimonials-avatar]");
-      const title = this.querySelector("[data-testimonials-title]");
-      const text = this.querySelector("[data-testimonials-text]");
+      const avatar = this.querySelector("[data-recommends-avatar]");
+      const title = this.querySelector("[data-recommends-title]");
+      const text = this.querySelector("[data-recommends-text]");
 
       if (avatar) {
         modalImg.src = avatar.src || "";
@@ -41,12 +41,12 @@ if (testimonialsItem.length > 0 && modalContainer && modalCloseBtn && overlay &&
       if (title) modalTitle.innerHTML = title.innerHTML;
       if (text) modalText.innerHTML = text.innerHTML;
 
-      testimonialsModalFunc();
+      recommendsModalFunc();
     });
   }
 
-  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-  overlay.addEventListener("click", testimonialsModalFunc);
+  modalCloseBtn.addEventListener("click", recommendsModalFunc);
+  overlay.addEventListener("click", recommendsModalFunc);
 }
 
 const select = document.querySelector("[data-select]");
