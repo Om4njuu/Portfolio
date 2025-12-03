@@ -9,6 +9,34 @@ if (sidebarBtn && sidebar) {
   sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 }
 
+/* Elevator pitch video modal */
+(() => {
+  const triggers = document.querySelectorAll('[data-video-trigger]');
+  const modal = document.querySelector('[data-video-modal]');
+  const overlay = document.querySelector('[data-video-overlay]');
+  const closeBtn = document.querySelector('[data-video-close]');
+  const iframe = document.querySelector('[data-video-iframe]');
+  const embedUrl = 'https://www.youtube.com/embed/fktI6wxwBk8?autoplay=1';
+
+  if (!modal || !iframe || triggers.length === 0) return;
+
+  const open = () => {
+    iframe.src = embedUrl;
+    modal.classList.add('active');
+  };
+
+  const close = () => {
+    modal.classList.remove('active');
+    // remove src to stop playback
+    iframe.src = '';
+  };
+
+  triggers.forEach(t => t.addEventListener('click', open));
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (overlay) overlay.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+
 const recommendsItem = document.querySelectorAll("[data-recommends-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
@@ -226,6 +254,8 @@ if (certSelect) {
           }
         }
       }
+
+      
 
       // apply filter to cert items
       for (let k = 0; k < certItems.length; k++) {

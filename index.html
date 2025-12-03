@@ -176,6 +176,23 @@
             </li>
           </ul>
         </section>
+        
+        <section class="elevator">
+          <h3 class="h3 elevator-title">Elevator Pitch</h3>
+          <div class="elevator-card">
+            <br>
+            <button type="button" class="video-card" data-video-trigger aria-label="Play elevator pitch">
+              <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/fktI6wxwBk8/hqdefault.jpg" alt="Elevator pitch thumbnail" loading="lazy">
+              </div>
+              <div class="video-meta">
+                <p class="video-text">Click to watch my elevator pitch</p>
+                <span class="video-duration">Watch</span>
+              </div>
+            </button>
+          </div>
+        </section>
+
       </article>
 
       <article class="resume" data-page="resume">
@@ -474,7 +491,7 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="marketing">
-              <a href="https://www.instagram.com/traveltotamriel" target="_blank">
+              <a href="https://www.instagram.com/p/DRdak2Xj0MI/" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1439,6 +1456,16 @@
       </article>
     </div>
   </main>
+
+  <div class="video-modal" data-video-modal>
+    <div class="video-overlay" data-video-overlay></div>
+    <div class="video-modal-box">
+      <button class="video-close" data-video-close aria-label="Close video">×</button>
+      <div class="video-wrapper">
+        <iframe data-video-iframe width="100%" height="480" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Elevator pitch video"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="./script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
